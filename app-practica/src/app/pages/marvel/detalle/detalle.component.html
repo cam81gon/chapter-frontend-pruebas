@@ -1,0 +1,19 @@
+<ng-container>
+    <form [formGroup]="form" #frmCompras="ngForm" (ngSubmit)="aceptar()">
+        <input placeholder="Nombre" required formControlName="nombre"><br>
+        <input placeholder="Is Author" required formControlName="idAuthor"><br>
+        <textarea matInput placeholder="Descripcion" required formControlName="descripcion"></textarea><br>
+        <input placeholder="Imagen URL" required formControlName="imagen" (keyup)="mostrarImagen($event)"><br>
+        <br><img [src]="imagenVista" alt="">
+
+        <br>
+        <button type="submit" [disabled]="form.invalid">           
+            <span>Aceptar</span>
+        </button>
+        <button color="accent" routerLink='/app-marvel' type="button">
+            <span>Cancelar</span>
+        </button>
+    </form>
+
+
+</ng-container>

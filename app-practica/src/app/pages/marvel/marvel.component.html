@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<ng-container>
+
+    <input (keyup)="filtrar($any($event.target).value)" placeholder="Buscar Author">
+    <button style="float: left" routerLinkActive="active" routerLink="/app-marvel/nuevo">
+       + Nuevo
+    </button>
+</ng-container>
+<table datatable class="row-border hover">
+    <thead class="tabla-titulo">
+        <tr>
+            <th>Imagen</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tabla-columna-principal" *ngFor="let item of authors">
+            <td class="tabla-fila">
+                <img src={{item.image}} alt="">
+            </td>
+            <td>
+                <button color="accent" (click)="eliminar(item._id)">
+                   eliminar
+                </button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<p>{{mensaje}}</p>

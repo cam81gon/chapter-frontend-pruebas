@@ -1,0 +1,21 @@
+.tabla-fila {
+    border: 1px solid #DCDCDC;
+    background-color: #FFFFFF;
+    border-left: 7px solid #FFCF62;
+    text-decoration: none;
+}
+
+.tabla-titulo {
+    text-align: center;
+    color: #656990;
+    font-family: "Swis721 LtCn BT";
+    font-weight: 300;
+}
+
+.tabla-columna-principal {
+    color: #605350;
+    font-family: "Swis721 Lt BT";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+}
